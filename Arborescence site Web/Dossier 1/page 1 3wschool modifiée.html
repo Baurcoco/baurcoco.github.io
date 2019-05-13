@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Problématique {background-color: red;}
+#Comment sont organisés les êtres unicellulaires et pluricellulaires ? {background-color: green;}
+#Comment peut-on expliquer la spécificité structurelle et fonctionnelle des cellules d'un être vivant pluricellulaire ? {background-color: blue;}
+#Réponse à la problématique {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Problématique', this, 'red')">Problématique
+  </button>
+<button class="tablink" onclick="openPage('Comment sont organisés les êtres unicellulaires et pluricellulaires', this, 'green')" id="defaultOpen"> Comment sont organisés les êtres unicellulaires et pluricellulaires ?</button>
+<button class="tablink" onclick="openPage('Comment peut-on expliquer la spécificité structurelle et fonctionnelle des cellules d'un être vivant pluricellulaire ?', this, 'blue')">Comment peut-on expliquer la spécificité structurelle et fonctionnelle des cellules d'un être vivant pluricellulaire ?</button>
+<button class="tablink" onclick="openPage('Réponse à la problématique', this, 'orange')">Réponse à la problématique</button>
+
+<div id="Problématique" class="tabcontent">
+	<h> Comment fonctionne un être vivant pluricellulaire ?
+	<p> - En quoi les différents niveaux d'organisation d'un être vivant pluricellulaire lui permettent de fonctionner ?
+		<br>
+		- Présentation du plan
+		<a href="Sous dossier 1/plan du cours.html">Cliquez ici</a>
+	</p>
+
+</div>
+
+<div id="Comment sont organisés les êtres unicellulaires et pluricelulaires ?" class="tabcontent">
+
+
+</div>
+
+<div id="-Structure de la molécule d ADN" class="tabcontent">
+  
+  
+</div>
+
+<div id="Réponse à la problématique" class="tabcontent">
+ 
+ 
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
